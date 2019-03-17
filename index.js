@@ -126,7 +126,8 @@ bot.on("message", function (msg) {
 
   if (msg.author.username == "dahop") {
     var dahop_message = "Shut the fuck up dahop\n"
-                        + "What do you want from me?";
+                        + "What do you want from me?"
+                        + ":laughing:";
 
     msg.channel.send(dahop_message);
     //msg.channel.send("Oh yeah baby ;)\n");
@@ -136,11 +137,12 @@ bot.on("message", function (msg) {
   if (msg.author.username == "zeropopulation") {
     var zeropopulation_msg = "Do you like long walks on the beach?\n"
                             +"I really don't.....\n"
-                            +"I just wanted to get that clear!";
+                            +"I just wanted to get that clear!"
+                            +"I am sorry hun."
+                            +"Don't be mad!"
+                            +":laughing:";
     //msg.channel.send("Get the fuck back to work!!!");
     //msg.channel.send("Don't make me send this to your boss!!!");
-    msg.channel.send("I am sorry hun.");
-    msg.channel.send("Don't be mad!");
     msg.channel.send(zeropopulation_msg);
   }
 
