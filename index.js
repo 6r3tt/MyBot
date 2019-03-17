@@ -61,7 +61,23 @@ bot.on("message", function (msg) {
     if (msg.author.id !== bot.user.id && msg.content.indexOf("MyBot") === i) {
       msg.channel.send(mybot_msg);
       console.log("[*] MyBot Index: " + i);
-    } //else {
+    }
+
+    if (msg.author.id !== bot.user.id && msg.content.indexOf("woah") === i || msg.content.indexOf("Woah") === i) {
+      msg.channel.send("What are you going to cry???woah");
+      // console output.
+      console.log("[!] User: " + msg.author.username + " is going to cry. " + "Index: " + i);
+    }
+
+    //if (msg.author.id !== bot.user.id && msg.content.indexOf("Hi") === i || msg.content.indexOf("hi") === i) {
+      //msg.channel.send("Say something better! Da fuck is da matta whitcha!!!")
+      // console output
+      //console.log("[!] FuckingHi: " + msg.author.username + " Index: " + i);
+      //break;
+    //}
+
+
+     //else {
       // This one is broken currently. Still learning.
       //if (msg.author.id !== bot.user.id && msg.content.indexOf("@MyBot#0329") === i) {
         //msg.channel.send(mybot_msg);
@@ -112,7 +128,7 @@ bot.on("message", function (msg) {
     var dahop_message = "Shut the fuck up dahop\n"
                         + "What do you want from me?";
 
-    //msg.channel.send(dahop_message);
+    msg.channel.send(dahop_message);
     //msg.channel.send("Oh yeah baby ;)\n");
     //msg.channel.send("Talk dirty to me!");
   }
@@ -123,8 +139,8 @@ bot.on("message", function (msg) {
                             +"I just wanted to get that clear!";
     //msg.channel.send("Get the fuck back to work!!!");
     //msg.channel.send("Don't make me send this to your boss!!!");
-    //msg.channel.send("I am sorry hun.");
-    //msg.channel.send("Don't be mad!");
+    msg.channel.send("I am sorry hun.");
+    msg.channel.send("Don't be mad!");
     msg.channel.send(zeropopulation_msg);
   }
 
