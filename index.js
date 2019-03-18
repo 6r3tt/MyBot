@@ -41,12 +41,20 @@ client.once('ready', () => {
 bot.on("message", function (msg) {
   // if message begins with "ping"
   if (msg.content.indexOf("ping") === 0 || msg.content.indexOf("Ping") === 0) {
-    // send a message to the channel the ping message was sent in.
-    //bot.sendMessage(msg.channel, "pong!");
-    msg.channel.send("pong fuckers!");
+    //
 
-    // alert the console
-    console.log("FuckingPinged: " + msg.author.username);
+    var pong = "pong!:poop:\n";
+
+    for (var i = 0; i < 2; i++) {
+      pong += "pong!:poop:\n";
+      msg.channel.send(pong);
+      // alert the console
+      console.log("FuckingPinged: " + msg.author.username + "Pong#: " + i);
+      //if (i == 2){
+        //break;
+      //}
+    }
+
   }
 
 
@@ -64,7 +72,7 @@ bot.on("message", function (msg) {
     }
 
     if (msg.author.id !== bot.user.id && msg.content.indexOf("woah") === i || msg.content.indexOf("Woah") === i) {
-      msg.channel.send("What are you going to cry???woah");
+      msg.channel.send("What are you going to cry???");
       // console output.
       console.log("[!] User: " + msg.author.username + " is going to cry. " + "Index: " + i);
     }
