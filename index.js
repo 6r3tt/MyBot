@@ -49,17 +49,13 @@ bot.on("message", function (msg) {
       pong += "pong!:poop:\n";
       msg.channel.send(pong);
       // alert the console
-      console.log("FuckingPinged: " + msg.author.username + "Pong#: " + i);
+      console.log("Pinged: " + msg.author.username + "Pong#: " + i);
       //if (i == 2){
         //break;
       //}
     }
 
   }
-
-
-
-
 
 
   var mybot_msg = "I am sorry I can't fix stupid\n"
@@ -76,70 +72,15 @@ bot.on("message", function (msg) {
       // console output.
       console.log("[!] User: " + msg.author.username + " is going to cry. " + "Index: " + i);
     }
-
-    //if (msg.author.id !== bot.user.id && msg.content.indexOf("Hi") === i || msg.content.indexOf("hi") === i) {
-      //msg.channel.send("Say something better! Da fuck is da matta whitcha!!!")
-      // console output
-      //console.log("[!] FuckingHi: " + msg.author.username + " Index: " + i);
-      //break;
-    //}
-
-
-     //else {
-      // This one is broken currently. Still learning.
-      //if (msg.author.id !== bot.user.id && msg.content.indexOf("@MyBot#0329") === i) {
-        //msg.channel.send(mybot_msg);
-        //console.log("[*] @MyBot#0329");
-      //} else {
-        // Call out the cry babys when they make it known.
-        //if (msg.author.id !== bot.user.id && msg.content.indexOf("woah") === i || msg.content.indexOf("Woah") === i) {
-          //msg.channel.send("What are you going to cry???");
-          // console output.
-          //console.log("[!] User: " + msg.author.username + " is going to cry. " + "Index: " + i);
-        //} else {
-          // Ping Pong. Where it all started. HelloWorld for Discord.js
-          //if (msg.author.id !== bot.user.id && msg.content.indexOf("ping") === i || msg.content.indexOf("Ping") === i) {
-            //bot.sendMessage(msg.channel, "pong!");
-            //msg.channel.send("pong fuckers!");
-            // console output.
-            //console.log("FuckingPinged: " + msg.author.username + "Index: " + i);
-          //} else {
-            // Hi can get so annoying.
-            //if (msg.author.id !== bot.user.id && msg.content.indexOf("Hi") === i || msg.content.indexOf("hi") === i) {
-              //msg.channel.send("Say something better! Da fuck is da matta whitcha!!!")
-              // console output
-              //console.log("FuckingHi: " + msg.author.username + " Index: " + i);
-            //}
-          //}
-        //}
-      //}
-    //}
   }
 
 
 
-
-
-//if (msg.content.indexOf("MyBot") === 0) {
-//    msg.channel.send(mybot_msg);
-//    console.log("[*] MyBot Index: 0")
-  // for (var i = 0; i < msg.length; i++) {
-  //  if (msg.content.includes(msg[i]) && msg.content == "MyBot") {
-      // If the message contains the word MyBot
-  //    var mybot_msg = "I am sorry I can't fix stupid\n"
-  //                   +"I can smack you in the face!";
-  //    msg.cannel.send(mybot_msg);
-  //  }
-  //}
-
   if (msg.author.username == "dahop") {
-    var dahop_message = "Shut the fuck up dahop\n"
-                        + "What do you want from me?"
+    var dahop_message = "Shut it dahop\n"
                         + ":laughing:";
 
     msg.channel.send(dahop_message);
-    //msg.channel.send("Oh yeah baby ;)\n");
-    //msg.channel.send("Talk dirty to me!");
   }
 
   if (msg.author.username == "zeropopulation") {
@@ -149,8 +90,6 @@ bot.on("message", function (msg) {
                             +"I am sorry hun."
                             +"Don't be mad!"
                             +":laughing:";
-    //msg.channel.send("Get the fuck back to work!!!");
-    //msg.channel.send("Don't make me send this to your boss!!!");
     msg.channel.send(zeropopulation_msg);
   }
 
@@ -159,14 +98,9 @@ bot.on("message", function (msg) {
                           +"Talk dirty to me!\n"
                           +"Say My name my lil spicycle ;)\n"
                           +":laughing:";
-    //msg.channel.send("Oh yeah baby ;)\n");
-    //msg.channel.send("Talk dirty to me!");
     msg.channel.send(lil_spicycle_msg);
   }
 });
 
-
-
-// Broken Login.
 client.login(config.token);
 bot.login(config.token);
