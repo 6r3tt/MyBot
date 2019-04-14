@@ -73,7 +73,7 @@ bot.on("message", function (msg) {
       console.log("[!] User: " + msg.author.username + " is going to cry. " + "Index: " + i);
     }
 
-    if (msg.author.id !== bot.user.id && msg.content.indexof("puppy") === i || msg.content.indexOf("Puppy") === i) {
+    if (msg.author.id !== bot.user.id && msg.content.indexOf("puppy") === i || msg.content.indexOf("Puppy") === i) {
       msg.channel.send("So your brothers knew all about that bro!");
       // console output.
       console.log("[!] User: " + msg.author.username + " is talking about a puppy. " + "Index: " + i);
