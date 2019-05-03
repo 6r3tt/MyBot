@@ -40,40 +40,41 @@ client.once('ready', () => {
 // Woah I have to try this.
 bot.on("message", function (msg) {
   // if message begins with "ping"
-  if (msg.content.indexOf("ping") === 0 || msg.content.indexOf("Ping") === 0) {
-    //
-
-    var pong = "pong!:poop:\n";
-
-    for (var i = 0; i < 2; i++) {
-      pong += "pong!:poop:\n";
+  for (var i = 0; i < 999999; i++) {
+    if (msg.content.indexOf("/ping") === i || msg.content.indexOf("/Ping") === i) {
+      var pong = "pong!:poop:\n";
+      //pong += "pong!:poop:\n";
       msg.channel.send(pong);
       // alert the console
       console.log("Pinged: " + msg.author.username + "Pong#: " + i);
-      //if (i == 2){
-        //break;
-      //}
     }
-
   }
+
 
 
   var mybot_msg = "I am sorry I can't fix stupid\n"
                  +"I can smack you in the face!";
   for (var i = 0; i < 999999; i++) {
     // If someone refrences me I will remark.
-    if (msg.author.id !== bot.user.id && msg.content.indexOf("MyBot") === i) {
+    if (msg.author.id !== bot.user.id && msg.content.indexOf("/MyBot") === i) {
       msg.channel.send(mybot_msg);
+      // console output.
       console.log("[*] MyBot Index: " + i);
     }
 
-    if (msg.author.id !== bot.user.id && msg.content.indexOf("woah") === i || msg.content.indexOf("Woah") === i) {
+    if (msg.author.id !== bot.user.id && msg.content.indexOf("/MyBot") === i) {
+      msg.channel.send(mybot_msg);
+      // console output.
+      console.log("[*] MyBot Index: " + i);
+    }
+
+    if (msg.author.id !== bot.user.id && msg.content.indexOf("/woah") === i || msg.content.indexOf("/Woah") === i) {
       msg.channel.send("What are you going to cry???");
       // console output.
       console.log("[!] User: " + msg.author.username + " is going to cry. " + "Index: " + i);
     }
 
-    if (msg.author.id !== bot.user.id && msg.content.indexOf("puppy") === i || msg.content.indexOf("Puppy") === i) {
+    if (msg.author.id !== bot.user.id && msg.content.indexOf("/puppy") === i || msg.content.indexOf("/Puppy") === i) {
       msg.channel.send("So your brothers knew all about that bro!");
       // console output.
       console.log("[!] User: " + msg.author.username + " is talking about a puppy. " + "Index: " + i);
@@ -81,7 +82,7 @@ bot.on("message", function (msg) {
   }
 
 
-
+/*
   if (msg.author.username == "dahop") {
     var dahop_message = "Shut it dahop\n"
                         + ":laughing:";
@@ -105,7 +106,7 @@ bot.on("message", function (msg) {
                           +"Say My name my lil spicycle ;)\n"
                           +":laughing:";
     msg.channel.send(lil_spicycle_msg);
-  }
+  }*/
 });
 
 client.login(config.token);
